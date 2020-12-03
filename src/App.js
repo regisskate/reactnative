@@ -47,7 +47,7 @@ export default function App() {
               <Text style={styles.repository}>{repository.title}</Text>
 
               <View style={styles.techsContainer}>
-                {repository.tech.map(tech => (
+                {repository.techs.map(tech => (
                   <Text key={tech} style={styles.tech}>
                     {tech}
                   </Text>
@@ -66,7 +66,7 @@ export default function App() {
 
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => handleLikeRepository(1)}
+                onPress={() => handleLikeRepository(repository.id)}
                 // Remember to replace "1" below with repository ID: 
                 testID={`like-button-${repository.id}`}
               >
